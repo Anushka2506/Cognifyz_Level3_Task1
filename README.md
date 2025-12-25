@@ -1,38 +1,29 @@
 Level 3 Task 1: Image Manipulation Gallery
-📌 Project Overview
-This project is part of my Web Development internship at @Cognifyz Technologies. The objective was to demonstrate advanced image manipulation techniques using only HTML5 and CSS3. The project features an automatic image slider and a fully functional interactive gallery with a lightbox effect.
 
-🚀 Key Features
-1. Automatic Image Slideshow
-Pure CSS Transitions: Implemented using @keyframes and the transform property to slide images horizontally.
+📌 Project Overview :
 
-Seamless Looping: The slider is designed to transition between three high-definition images automatically every few seconds.
+Interactive web gallery created for the @Cognifyz Technologies internship. This project demonstrates advanced Pure CSS techniques for image manipulation without using JavaScript.
 
-Flexbox Layout: Ensures the images are aligned perfectly within the slider container without gaps.
+🚀 Key Features :
 
-2. Interactive Image Gallery
-Click-to-Enlarge (Lightbox): Uses the CSS :target pseudo-class to open a full-screen view of images when a thumbnail is clicked—eliminating the need for JavaScript.
+Automatic Slideshow: Uses CSS @keyframes and flexbox for a smooth, seamless image slider.
 
-Glassmorphism UI: The enlarged view features a modern backdrop-filter: blur() effect, creating a premium frosted-glass aesthetic.
+Lightbox Effect: Implements the :target pseudo-class to enlarge images on click.
 
-Animated Interactions: Thumbnails include a "pop-out" hover effect using cubic-bezier transitions for a smooth, tactile feel.
+Modern UI: Features a slate gradient background, glassmorphism blur effects, and smooth hover transitions.
 
-3. Professional UI/UX
-Custom Color Palette: Uses a sophisticated "Muted Slate" linear gradient background to reduce eye strain and make the imagery pop.
+Fully Responsive: Flexible grid layout that adapts to different screen sizes.
 
-Responsive Design: The gallery grid uses flex-wrap to ensure compatibility across different screen sizes.
+🛠️ Technologies :
 
-Styled Components: A custom-designed circular close button with a 90-degree rotation hover effect.
+HTML5
 
-🛠️ Technologies Used
-HTML5: For semantic structure.
+CSS3 (Animations, Flexbox, Pseudo-classes)
 
-CSS3: Including:
+📂 Structure :
 
-Advanced Animations (@keyframes)
+index.html - Structure
 
-Pseudo-classes (:target, :hover)
+style.css - Design & Logic
 
-Flexbox Layouts
-
-Linear Gradients & Glassmorphism (backdrop-filter)
+/images - Media assets
