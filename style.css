@@ -1,0 +1,168 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Muted Slate Gradient: Less purple, more sophisticated */
+    background: linear-gradient(135deg, #1e2024, #2c3e50, #1e2024);
+    background-attachment: fixed;
+    text-align: center;
+    color: #f8f9fa; /* Off-white for softer contrast */
+    padding-bottom: 50px;
+    min-height: 100vh;
+}
+
+.main-title {
+    margin: 40px 0 10px;
+    font-weight: 200; /* Thinner font weight looks more "high-fashion" */
+    font-size: 2.5rem;
+    letter-spacing: 5px; /* More space between letters */
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.gallery-section h2 {
+    color: #95a5a6; /* Soft grey-blue */
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+
+
+/* --- SLIDESHOW SECTION --- */
+.slideshow-container {
+    width: 800px; 
+    height: 450px;
+    margin: 0 auto 60px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    background-color: #000; /* Backdrop for images */
+}
+
+.slider {
+    display: flex;
+    width: 300%; 
+    font-size: 0; /* Fixes the vertical/side spacing gap */
+    animation: slide-animation 12s infinite ease-in-out;
+}
+
+.slider img {
+    width: 800px;
+    height: 450px;
+    object-fit: cover;
+    display: block; /* Ensures no extra spacing */
+}
+
+@keyframes slide-animation {
+    0% { transform: translateX(0); }
+    30% { transform: translateX(0); }
+    33% { transform: translateX(-800px); }
+    63% { transform: translateX(-800px); }
+    66% { transform: translateX(-1600px); }
+    96% { transform: translateX(-1600px); }
+    100% { transform: translateX(0); }
+}
+
+/* --- GALLERY SECTION --- */
+.gallery-section h2 {
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 280px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+
+/* --- LIGHTBOX (ENLARGE) POLISH --- */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px); /* Modern frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 85%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    animation: zoomIn 0.4s forwards;
+}
+
+/* Polished Close Button */
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.15);
+    width: 55px;
+    height: 55px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    font-weight: 200;
+}
+
+.close:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(90deg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    to { transform: scale(1); }
+}
